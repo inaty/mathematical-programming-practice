@@ -1,4 +1,19 @@
 # mathematical-programming-practice
-Mathematical programming practice.
 
 ALBERT社の数理最適化勉強会の練習用レポジトリ
+
+#### ディレクトリ構成
+
+```
+└[メンバー名]
+　　└ [課題名]
+  　　└ *.py
+   └ *.csv 
+   ...
+└[メンバー名]
+...
+```
+
+#### ブランチの生成ルール
+
+mainから[メンバー名]/[課題名]という名称でブランチを切り、開発が終わったらmainに直接マージする。
