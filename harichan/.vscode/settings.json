@@ -1,0 +1,31 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "editor.formatOnSave": true,
+    "autoDocstring.docstringFormat": "google",
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": ".venv/bin/flake8",
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+        "--ignore=E203, E501, W503, W504",
+        // E203: Whitespace before ':'
+        // E501: Line too long (82 > 79 characters)
+        // W503: Line break occurred before a binary operator
+        // W504: Line break occurred after a binary operator
+    ],
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": ".venv/bin/black",
+    "python.formatting.blackArgs": [
+        "--line-length=120"
+    ],
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "markdownlint.config": {
+        "MD022": false,  // Headings should be surrounded by blank lines
+        "MD031": false,  // Fenced code blocks should be surrounded by blank lines
+        "MD032": false,  // Lists should be surrounded by blank lines
+        "MD033": false,  // Inline HTML
+        "MD040": false,  // Fenced code blocks should have a language specified
+    }
+}
