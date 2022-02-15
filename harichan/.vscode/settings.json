@@ -5,20 +5,9 @@
     "editor.formatOnSave": true,
     "autoDocstring.docstringFormat": "google",
     "python.linting.flake8Enabled": true,
-    "python.linting.flake8Path": ".venv/bin/flake8",
-    "python.linting.flake8Args": [
-        "--max-line-length=120",
-        "--ignore=E203, E501, W503, W504",
-        // E203: Whitespace before ':'
-        // E501: Line too long (82 > 79 characters)
-        // W503: Line break occurred before a binary operator
-        // W504: Line break occurred after a binary operator
-    ],
+    "python.linting.flake8Path": ".venv/bin/pflake8",
     "python.formatting.provider": "black",
     "python.formatting.blackPath": ".venv/bin/black",
-    "python.formatting.blackArgs": [
-        "--line-length=120"
-    ],
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,
     "markdownlint.config": {
