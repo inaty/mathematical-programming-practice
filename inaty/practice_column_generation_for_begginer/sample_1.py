@@ -2,15 +2,23 @@ import imp
 import numpy as np
 from mip import Model, xsum, minimize, BINARY, INTEGER
 import time
+import sys
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('size_items', help='size of items')
+args = parser.parse_args()
 
 # ビンの容量
 B = 8
+# アイテムの数
+size_items = int(args.size_items)
 # アイテムの集合
 # I = [1, 2, 3, 4]
-I = [i+1 for i in range(10)]
+I = [i+1 for i in range(size_items)]
 # 各アイテムの大きさ
 # S = [1, 3, 6, 7]
-S = [(I[i] + 1234) % B for i in range(10)]
+S = [(I[i] + 1234) % B for i in range(size_items)]
 
 m = Model('binpacking')
 
